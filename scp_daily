@@ -1,0 +1,9 @@
+#!/bin/bash
+#archive
+scp /var/backups/archive/adsl/$(date --date yesterday +"%Y-%m-%d").csv root@10.92.92.26:/var/warehouse/archive/adsl/
+scp -P 9595 /var/backups/archive/adsl/$(date --date yesterday +"%Y-%m-%d").csv root@192.168.98.1:/var/backups/archive/adsl/
+#daily-report
+scp /var/backups/archive/adsl/$(date --date yesterday +"%Y-%m-%d").csv root@10.92.92.26:/var/warehouse/archive/adsl/
+scp -P 9595 /var/backups/archive/adsl/$(date --date yesterday +"%Y-%m-%d").csv root@192.168.98.1:/var/backups/archive/adsl/
+
+

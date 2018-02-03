@@ -1,0 +1,1 @@
+curl -T /var/backups/IBSng/complete/1/IBSng_dump ftp://10.10.10.15 --user biglari:1332

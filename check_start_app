@@ -1,0 +1,10 @@
+
+#!/bin/bash
+
+ps aux | grep -i --color pmacct | grep "pmacctd\: Core Process \[default\]"
+if [ "$?" -eq "0" ]; then
+        echo "pmacct is run..."
+else
+        pmacctd -f /usr/local/IBSng/addons/pmacct/pmacctd.conf
+fi
+## end

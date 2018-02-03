@@ -1,0 +1,6 @@
+pid=`ps ax |egrep myscript |awk {'print $1'}`
+kill -9 $pid
+#OR
+
+kill $pid
+

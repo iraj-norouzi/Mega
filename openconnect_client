@@ -1,0 +1,1 @@
+echo '!B$P@R$' | openconnect 79.127.118.2 --user=ibs --no-cert-check --passwd-on-stdin

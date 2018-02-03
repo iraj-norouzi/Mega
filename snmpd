@@ -1,0 +1,34 @@
+
+Install SNMP
+
+# apt-get install snmpd
+apt-get install snmp
+
+Delete the contents of the SNMP service configuration file using the following command:
+
+# echo > /etc/snmp/snmpd.conf
+ 
+
+Edit the snmpd.conf configuration file as shown.
+
+# vi /etc/snmp/snmpd.conf
+
+rocommunity VegetaRocks
+syslocation Vegeta planet 
+sysContact Vegeta <vegeta@dbz.com>;
+ 
+
+
+In our example, we used the community name VegetaRocks, Location planet vegeto and contact Vegeta.
+
+Restart SNMP.
+
+# /etc/init.d/snmpd restart
+
+Install and run the rcconf utility, check the SNMP service to start automatically at boot:
+
+# apt-get install rcconf
+# rcconf
+
+
+snmpwalk -v2c -c Vega 127.0.0.1
