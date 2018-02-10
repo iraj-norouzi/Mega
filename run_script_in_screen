@@ -1,0 +1,1 @@
+/usr/bin/screen -dm -S restart_offline_server /bin/bash /root/restart_offline_server.sh

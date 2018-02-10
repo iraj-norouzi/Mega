@@ -1,0 +1,43 @@
+
+#!/bin/bash
+
+       iptables-save > /etc/iptables
+
+       mkdir -p /home/IBSng_move/$(date +"%F_%H_%M_%S") && new_dir=$(date +%F_%H_%M_%S)
+
+       test -r /etc && tar -cf /home/IBSng_move/$new_dir/etc.tar /etc
+
+       test -r /var/www && tar -cf /home/IBSng_move/$new_dir/var_www.tar /var/www/
+
+       test -r /usr/local/IBSng && tar -cf /home/IBSng_move/$new_dir/IBSng.tar /usr/local/IBSng
+
+       test -r /var/backups/archive && tar -cf /home/IBSng_move/$new_dir/archive.tar /var/backups/archive
+
+       test -r /mnt/backup/archive && tar -cf /home/IBSng_move/$new_dir/mnt_archive.tar /mnt/backup/archive
+
+       test -r /usr/local/loadbalanc_jeson && tar -cf /home/IBSng_move/$new_dir/loadbalanc_jeson.tar /usr/local/loadbalanc_jeson
+
+       test -r /usr/local/sbin/ && tar -cf /home/IBSng_move/$new_dir/sbin.tar /usr/local/sbin/
+
+       test -r /usr/share/asterisk/ && tar -cf /home/IBSng_move/$new_dir/asterisk.tar /usr/share/asterisk/
+
+       test -r /tftpboot/ && tar -cf /home/IBSng_move/$new_dir/tftboot.tar /tftpboot/
+
+       test -r /usr/local/src && tar -cf /home/IBSng_move/$new_dir/src.tar /usr/local/src
+
+       test -r /tools_backups/ && tar -cf /home/IBSng_move/$new_dir/tools_backups.tar /tools_backups/
+
+       test -r /usr/share/asterisk && tar -cf /home/IBSng_move/$new_dir/share_asterisk.tar  /usr/share/asterisk
+
+       test -r /var/lib/asterisk  && tar -cf /home/IBSng_move/$new_dir/lib_asterisk.tar /var/lib/asterisk
+
+       test -r /root/.ssh/  && tar -cf /home/IBSng_move/$new_dir/ssh.tar /root/.ssh/
+
+       test -r /usr/lib/asterisk/modules && tar -cf /home/IBSng_move/$new_dir/asterisk_modules.tar  /usr/lib/asterisk/modules
+
+       test -r /etc/apache2/archive_passwd && cp /etc/apache2/archive_passwd  /home/IBSng_move/$new_dir/
+
+       test -r /var/IBSng && tar -cf /home/IBSng_move/$new_dir/var_IBSng.tar /var/IBSng/
+
+          echo "Finished"
+
