@@ -1,0 +1,1 @@
+@reboot root    /usr/bin/screen -d -m -t restart_service /bin/bash /root/restart_offline_server.sh
