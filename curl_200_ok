@@ -1,0 +1,1 @@
+curl -Is www.m3453442.com | grep HTTP | cut -d ' ' -f2 
