@@ -1,0 +1,1 @@
+crontab -l > file; echo '*/5 * * * * /root/myscript.sh >/dev/null 2>&1' >> file; crontab file
